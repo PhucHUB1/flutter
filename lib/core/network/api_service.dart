@@ -1,18 +1,20 @@
+import 'dart:convert';
 import 'package:http/http.dart' as http;
 
 class ApiService {
-  final String baseUrl;
-  final http.Client client;
+  final String apiKey = 'AIzaSyDEFt5aTpOtgdrXAE3dmyY16Wl6D5qRym4';
 
-  ApiService(this.baseUrl, this.client);
+  Future<List<dynamic>> fetchVideos(String singer) async {
+    final url =
+        'https://www.googleapis.com/youtube/v3/search?part=snippet&q=$singer&type=video&key=$apiKey';
 
-  Future<http.Response> get(String endpoint) async {
-    final url = '$baseUrl$endpoint';
-    final response = await client.get(Uri.parse(url));
-    if (response.statusCode != 200) {
-      throw Exception('Failed to load data');
+    final response = await http.get(Uri.parse(url));
+
+    if (response.statusCode == 200) {
+      final data = json.decode(response.body);
+      return data['items'];
+    } else {
+      return [];
     }
-    print(response);
-    return response;
   }
 }
