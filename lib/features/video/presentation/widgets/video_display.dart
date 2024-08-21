@@ -9,7 +9,7 @@ class VideoDisplay extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListTile(
+    return Column(
     children: [
       Text(
         video.videoTitle,
