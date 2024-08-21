@@ -26,6 +26,8 @@ class WeatherDisplay extends StatelessWidget {
           weather.condition,
           style: TextStyle(fontSize: 24),
         ),
+        SizedBox(height: 8),
+        Image.network('https:${weather.icon}')
       ],
     );
   }

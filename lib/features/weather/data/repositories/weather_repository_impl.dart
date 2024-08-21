@@ -12,7 +12,7 @@ class WeatherRepositoryImpl implements WeatherRepository {
 
   @override
   Future<Weather> getWeather(String location) async {
-    final response = await apiService.get('/current.json?key=4e8ab5e20e3e49c59f522056241908&q=$location');
+    final response = await apiService.get('/current.json?key=400ead4c8b1f4486b5b33843242108&q=$location');
     final weatherJson = jsonDecode(response.body);
     return WeatherModel.fromJson(weatherJson);
   }
