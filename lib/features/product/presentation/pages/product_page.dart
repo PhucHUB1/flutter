@@ -1,6 +1,6 @@
-import 'package:app_flutter/features/video/domain/entities/product.dart';
-import 'package:app_flutter/features/video/domain/use_cases/get_products.dart';
-import 'package:app_flutter/features/video/presentation/pages/product_detail_page.dart';
+import 'package:app_flutter/features/product/domain/entities/product.dart';
+import 'package:app_flutter/features/product/domain/use_cases/get_products.dart';
+import 'package:app_flutter/features/product/presentation/pages/product_detail_page.dart';
 
 import 'package:flutter/material.dart';
 

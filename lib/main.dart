@@ -2,9 +2,9 @@
 import 'package:flutter/material.dart';
 
 import 'core/network/api_service.dart';
-import 'features/video/data/repositories/product_repository_impl.dart';
-import 'features/video/domain/use_cases/get_products.dart';
-import 'features/video/presentation/pages/product_page.dart';
+import 'features/product/data/repositories/product_repository_impl.dart';
+import 'features/product/domain/use_cases/get_products.dart';
+import 'features/product/presentation/pages/product_page.dart';
 
 void main() {
   final apiService = ApiService();

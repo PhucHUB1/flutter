@@ -1,4 +1,4 @@
-import 'package:app_flutter/features/video/data/repositories/product_repository.dart';
+import 'package:app_flutter/features/product/data/repositories/product_repository.dart';
 import '../../../../core/network/api_service.dart';
 import '../../domain/entities/product.dart';
 import '../models/product_model.dart';

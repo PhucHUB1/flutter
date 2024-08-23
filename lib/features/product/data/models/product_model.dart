@@ -1,5 +1,5 @@
 
-import 'package:app_flutter/features/video/domain/entities/product.dart';
+import 'package:app_flutter/features/product/domain/entities/product.dart';
 
 class ProductModel extends Product {
   ProductModel({
