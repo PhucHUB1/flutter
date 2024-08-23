@@ -1,31 +1,32 @@
+
 import 'package:flutter/material.dart';
 
 import 'core/network/api_service.dart';
-import 'features/video/data/repositories/video_repository_impl.dart';
-import 'features/video/domain/use_cases/get_video.dart';
-import 'features/video/presentation/pages/video_page.dart';
+import 'features/video/data/repositories/product_repository_impl.dart';
+import 'features/video/domain/use_cases/get_products.dart';
+import 'features/video/presentation/pages/product_page.dart';
 
 void main() {
   final apiService = ApiService();
-  final videoRepository = VideoRepositoryImpl(apiService: apiService);
-  final getVideo = GetVideo(repository: videoRepository);
+  final productRepository = ProductRepositoryImpl(apiService: apiService);
+  final getProducts = GetProducts(repository: productRepository);
 
-  runApp(MyApp(getVideo: getVideo));
+  runApp(MyApp(getProducts: getProducts));
 }
 
 class MyApp extends StatelessWidget {
-  final GetVideo getVideo;
+  final GetProducts getProducts;
 
-  MyApp({required this.getVideo});
+  MyApp({required this.getProducts});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'YouTube Video List',
+      title: 'Product List',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: VideoPage(getVideo: getVideo),
+      home: ProductPage(getProducts: getProducts),
     );
   }
 }
